@@ -1,6 +1,6 @@
 import { MainLayout, SectionContainer } from "./components"
 import { SectionIdEnum } from "./types"
-import { IntroSection } from "./components/sections"
+import { IntroSection, AboutSection, EducationSection, ProjectsSection, ContactSection } from "./components/sections"
 import { Divider } from "@mui/material";
 
 function App() {
@@ -11,19 +11,19 @@ function App() {
     }, 
     {
       sectionId: SectionIdEnum.about, 
-      component: <IntroSection />, 
+      component: <AboutSection />, 
     }, 
     {
       sectionId: SectionIdEnum.education, 
-      component: <IntroSection />, 
+      component: <EducationSection />, 
     }, 
     {
       sectionId: SectionIdEnum.projects, 
-      component: <IntroSection />, 
+      component: <ProjectsSection />, 
     }, 
     {
       sectionId: SectionIdEnum.contact, 
-      component: <IntroSection />, 
+      component: <ContactSection />, 
     }, 
   ]; 
 
