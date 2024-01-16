@@ -1,22 +1,42 @@
-import Heading from "./components/Heading"
-// if not having "export default" section at the end and "export const" instead of "const"
-import { Section } from "./components/Section"
-import Counter from "./components/Counter"
-import List from "./components/List"
-
-import { useState } from "react"
+import { MainLayout, SectionContainer } from "./components"
+import { SectionIdEnum } from "./types"
+import { IntroSection } from "./components/sections"
+import { Divider } from "@mui/material";
 
 function App() {
-  const [count, setCount] = useState<number>(0)
+  const sections = [
+    {
+      sectionId: SectionIdEnum.intro, 
+      component: <IntroSection />, 
+    }, 
+    {
+      sectionId: SectionIdEnum.about, 
+      component: <IntroSection />, 
+    }, 
+    {
+      sectionId: SectionIdEnum.education, 
+      component: <IntroSection />, 
+    }, 
+    {
+      sectionId: SectionIdEnum.projects, 
+      component: <IntroSection />, 
+    }, 
+    {
+      sectionId: SectionIdEnum.contact, 
+      component: <IntroSection />, 
+    }, 
+  ]; 
 
   return (
-    <>
-      <Heading title={"This is a very much"}/>
-      <Section title={"incomplete website"}>some random stuff below</Section>
-      <Counter setCount = {setCount}> Count is {count}</Counter>
-      <List items={["blah", "blah blah", "blah blah blah"]} render={(item: string) => <span className="bold">{item}</span>} />
-    </>
-  )
+    <MainLayout>
+      {sections.map(({ component, sectionId }) => {
+        return <SectionContainer sectionId={sectionId} key={sectionId}>
+          <Divider />
+          {component}
+        </SectionContainer>
+      })}
+    </MainLayout>
+  ); 
 }
 
 export default App
