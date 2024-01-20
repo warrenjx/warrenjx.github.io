@@ -59,7 +59,7 @@ export const Navigation: React.FC<NavigationProps> = ({isSmall}) => {
   return (
     <>
       <Hidden smDown>
-        <Box display="flex" gap={2}>
+        <Box display="flex" gap={2} sx={{ fontWeight: 'bold' }}>
           {mappedItems}
         </Box>
       </Hidden>
@@ -81,7 +81,7 @@ export const Navigation: React.FC<NavigationProps> = ({isSmall}) => {
         >
           <AppBar position="static" sx={{ background : "white", color : "text.primary"}}>
             <Toolbar>
-              <Typography variant="h5" sx={{ flexgrow : 1 }}>
+              <Typography variant="h5" sx={{ flex : 1 }}>
                 Menu
               </Typography>
               <IconButton color="inherit" onClick={onCloseHandler}>
