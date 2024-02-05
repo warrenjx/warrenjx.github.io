@@ -21,7 +21,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({children}) => {
             <AnchorLink href={`#${SectionIdEnum.intro}`} offset={isSmall ? '56px' : '64px'} className="all_unset">
               <Box display="flex" alignItems="center" gap={0.5} sx={{ cursor: 'pointer' }}>
                 <img width="54px" height="54px" src={tempLogoImg} alt="logo" />
-                <Typography variant="h5" sx={{ width: 'fit-content' }}>Logo</Typography>
+                <Typography variant="h5" sx={{ width: 'fit-content' }}>Warren Xiong</Typography>
               </Box>
             </AnchorLink>
           </Box>
