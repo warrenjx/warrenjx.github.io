@@ -4,8 +4,25 @@
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: 'Roboto';
+}
+
 .all_unset {
   all: unset;
+}
+
+.school_logo {
+  width: 220px; 
+  height: 200px; 
+  border-radius: 20%;
+  display: block;
+  margin-right: 20px;
+}
+
+.container {
+  display: flex; 
+  margin-bottom: 10px; 
 }
 
 /*
